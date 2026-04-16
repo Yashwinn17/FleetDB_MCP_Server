@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "fleetdb": {
+      "command": "/absolute/path/to/your/.venv/bin/fleetdb-mcp",
+      "args": [],
+      "env": {
+        "DATABASE_URL": "postgresql://fleet:fleet@localhost:5432/fleetdb",
+        "MCP_ACTOR": "claude-desktop",
+        "MCP_MAX_ROWS": "500",
+        "MCP_QUERY_TIMEOUT_MS": "5000",
+        "MCP_PROPOSAL_TTL_S": "300"
+      }
+    }
+  }
+}

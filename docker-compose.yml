@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fleetdb-postgres
+    environment:
+      POSTGRES_USER: fleet
+      POSTGRES_PASSWORD: fleet
+      POSTGRES_DB: fleetdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - fleetdb_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fleet -d fleetdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  fleetdb_data:

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+site/
+pip-wheel-metadata/
+
+# Env / local config
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+.python-version
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes / db dumps
+*.dump
+*.sql.bak
+
+# Runtime / logs
+*.log
+logs/
+tmp/
+temp/
+
+# Keep project docs checked in
+!docs/
+!docs/*.md
